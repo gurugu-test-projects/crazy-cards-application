@@ -1,6 +1,8 @@
 import useAsyncEffect from "use-async-effect";
 import axios from "axios";
-import './App.css';
+
+import { UserForm, CardList } from "..";
+import "./index.css";
 
 export const App = () => {
   useAsyncEffect(async (isMounted) => {
@@ -23,7 +25,8 @@ export const App = () => {
 
   return (
     <div className="App">
-      The App
+      <UserForm />
+      <CardList />
     </div>
   );
-}
+};
