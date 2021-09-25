@@ -35,5 +35,19 @@
     "req": {
       "income": 16000
     }
+  },
+  {
+    "id": 3,
+    "data": {
+      "title": "Test Card 1",
+      "apr": "33.9",
+      "balanceTransferOfferDuration": 12,
+      "purchaseOfferDuration": 6,
+      "credit": 3000
+    },
+    "req": {
+      "income": 16000,
+      "employment": "student"
+    }
   }
 ]

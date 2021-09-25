@@ -34,17 +34,19 @@ export const UserForm = ({ onSetCards }) => {
       .filter((card) => {
         if (Object.keys(card.req).length === 0) {
           return true;
-        }
+        } else {
+          return Object.keys(card.req).every((req) => {
+            if (req === "income") {
+              return data.income > card.req.income;
+            }
 
-        if (card.req.income) {
-          return data.income > card.req.income;
-        }
+            if (req === "employment") {
+              return data.employment === card.req.employment;
+            }
 
-        if (card.req.employment) {
-          return data.employment === card.req.employment;
+            return false;
+          });
         }
-
-        return false;
       })
       .map((card) => ({ ...card.data }));
 
