@@ -26,15 +26,8 @@ export const CardList = ({ cards, onSetCards }) => {
       }
       return card;
     });
-    // const totalCredit = updatedCards.reduce((total, card) => {
-    //   if (card.selected) {
-    //     return total + card.credit;
-    //   }
-    //   return total;
-    // }, 0);
 
     onSetCards(updatedCards);
-    // setTotalCredit(totalCredit);
   };
 
   return (
