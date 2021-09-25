@@ -1,0 +1,43 @@
+.user-form {
+  border: 1px solid #5b6b79;
+  border-radius: 8px;
+}
+
+.user-form form {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.user-form-title {
+  text-align: center;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0.5rem;
+}
+
+.form-group label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.form-group select,
+.form-group input {
+  max-width: 300px;
+  padding: 0.2rem;
+}
+
+.form-group p {
+  grid-column-start: 2;
+  margin: 0.4rem 0 0;
+  color: tomato;
+}
+
+.user-form input[type="submit"] {
+  display: block;
+  padding: 0.2rem 1rem;
+  margin: 1rem auto 0;
+}
