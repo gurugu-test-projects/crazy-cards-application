@@ -1,0 +1,25 @@
+.card {
+  padding: 1rem;
+  border: 2px solid #5b6b79;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.card:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.card:hover {
+  border-color: #a5a0f3;
+}
+
+.card.selected {
+  border-color: #a5a0f3;
+}
+
+.card h5 {
+  text-align: center;
+  margin: 0;
+  transition: color 0.2s;
+}

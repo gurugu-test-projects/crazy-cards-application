@@ -31,7 +31,7 @@ export const App = () => {
   return (
     <div className="App">
       <UserForm onSetCards={setCards} />
-      <CardList cards={cards} />
+      <CardList cards={cards} onSetCards={setCards} />
     </div>
   );
 };
