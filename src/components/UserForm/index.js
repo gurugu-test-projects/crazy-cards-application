@@ -48,7 +48,7 @@ export const UserForm = ({ onSetCards }) => {
           });
         }
       })
-      .map((card) => ({ ...card.data }));
+      .map((card) => ({ ...card.data, id: card.id }));
 
     onSetCards(eligibleCards);
   };

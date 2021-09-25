@@ -1,0 +1,17 @@
+.card-list {
+  flex-grow: 3;
+  padding-left: 1rem;
+}
+
+.card-list-title {
+  text-align: center;
+  background: #645bea;
+  color: #fff;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.card-list-message {
+  text-align: center;
+  margin-top: 2rem;
+}

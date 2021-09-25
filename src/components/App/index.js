@@ -7,7 +7,6 @@ import "./index.css";
 
 export const App = () => {
   const [cards, setCards] = useState([]);
-  const [totalCredit, setTotalCredit] = useState(0);
 
   // useAsyncEffect(async (isMounted) => {
   //   const getData = async () => {
@@ -32,7 +31,7 @@ export const App = () => {
   return (
     <div className="App">
       <UserForm onSetCards={setCards} />
-      <CardList />
+      <CardList cards={cards} />
     </div>
   );
 };
