@@ -1,31 +1,37 @@
-import useAsyncEffect from "use-async-effect";
-import axios from "axios";
+import { useState } from "react";
+// import useAsyncEffect from "use-async-effect";
+// import axios from "axios";
 
 import { UserForm, CardList } from "..";
 import "./index.css";
 
 export const App = () => {
-  useAsyncEffect(async (isMounted) => {
-    const getData = async () => {
-      return await axios.get("http://localhost:3001/posts");
-    };
+  const [cards, setCards] = useState([]);
+  const [totalCredit, setTotalCredit] = useState(0);
 
-    try {
-      const res = await getData();
+  // useAsyncEffect(async (isMounted) => {
+  //   const getData = async () => {
+  //     return await axios.get(
+  //       "http://localhost:3001/cards?req.employment=student&req={}"
+  //     );
+  //   };
 
-      if (!isMounted) {
-        return;
-      }
+  //   try {
+  //     const res = await getData();
 
-      console.log(res.data);
-    } catch (err) {
-      console.error(err);
-    }
-  }, []);
+  //     if (!isMounted) {
+  //       return;
+  //     }
+
+  //     console.log(res.data);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // }, []);
 
   return (
     <div className="App">
-      <UserForm />
+      <UserForm onSetCards={setCards} />
       <CardList />
     </div>
   );

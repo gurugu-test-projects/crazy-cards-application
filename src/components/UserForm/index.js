@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { useForm, ErrorMessage } from "react-hook-form";
+import React from "react";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import "./index.css";
+import cardList from "../../data/cardList.json";
 
 const schema = yup
   .object({
@@ -18,16 +19,43 @@ const schema = yup
   })
   .required();
 
-export const UserForm = () => {
+export const UserForm = ({ onSetCards }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitSuccessful },
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const [result, setResult] = useState("");
-  const onSubmit = (data) => setResult(JSON.stringify(data));
+
+  const onSubmit = (data) => {
+    const eligibleCards = cardList
+      .filter((card) => {
+        if (Object.keys(card.req).length === 0) {
+          return true;
+        }
+
+        if (card.req.income) {
+          return data.income > card.req.income;
+        }
+
+        if (card.req.employment) {
+          return data.employment === card.req.employment;
+        }
+
+        return false;
+      })
+      .map((card) => ({ ...card.data }));
+
+    onSetCards(eligibleCards);
+  };
+
+  React.useEffect(() => {
+    if (isSubmitSuccessful) {
+      // reset();
+    }
+  }, [isSubmitSuccessful, reset]);
 
   return (
     <div className="user-form">

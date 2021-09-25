@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "data": {
+      "title": "Student Life",
+      "apr": "18.9",
+      "balanceTransferOfferDuration": 0,
+      "purchaseOfferDuration": 6,
+      "credit": 1200
+    },
+    "req": {
+      "employment": "student"
+    }
+  },
+  {
+    "id": 2,
+    "data": {
+      "title": "Anywhere Card",
+      "apr": "33.9",
+      "balanceTransferOfferDuration": 0,
+      "purchaseOfferDuration": 0,
+      "credit": 300
+    },
+    "req": {}
+  },
+  {
+    "id": 3,
+    "data": {
+      "title": "Liquid Card",
+      "apr": "33.9",
+      "balanceTransferOfferDuration": 12,
+      "purchaseOfferDuration": 6,
+      "credit": 3000
+    },
+    "req": {
+      "income": 16000
+    }
+  }
+]
