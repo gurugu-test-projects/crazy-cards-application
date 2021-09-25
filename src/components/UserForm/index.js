@@ -41,7 +41,7 @@ export const UserForm = ({ onSetCards }) => {
             }
 
             if (req === "employment") {
-              return data.employment === card.req.employment;
+              return card.req.employment.includes(data.employment);
             }
 
             return false;

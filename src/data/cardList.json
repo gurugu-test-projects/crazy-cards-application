@@ -9,7 +9,7 @@
       "credit": 1200
     },
     "req": {
-      "employment": "student"
+      "employment": ["student"]
     }
   },
   {
@@ -37,7 +37,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 4,
     "data": {
       "title": "Test Card 1",
       "apr": "33.9",
@@ -47,7 +47,21 @@
     },
     "req": {
       "income": 16000,
-      "employment": "student"
+      "employment": ["student"]
+    }
+  },
+  {
+    "id": 5,
+    "data": {
+      "title": "Test Card 2",
+      "apr": "33.9",
+      "balanceTransferOfferDuration": 12,
+      "purchaseOfferDuration": 6,
+      "credit": 3000
+    },
+    "req": {
+      "income": 5000,
+      "employment": ["student", "parttime"]
     }
   }
 ]
