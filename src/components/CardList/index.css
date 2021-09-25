@@ -22,3 +22,9 @@
     margin-top: 1rem;
   }
 }
+
+@media (max-width: 600px) {
+  .card-list-title {
+    padding: 0.7rem;
+  }
+}

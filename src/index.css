@@ -24,3 +24,13 @@ select {
   min-height: 100vh;
   background-color: #fff;
 }
+
+@media (max-width: 600px) {
+  * {
+    font-size: 12px;
+  }
+
+  body {
+    line-height: 1.2;
+  }
+}
