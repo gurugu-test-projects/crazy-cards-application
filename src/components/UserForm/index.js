@@ -65,57 +65,68 @@ export const UserForm = ({ onSetCards }) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
           <label htmlFor="title">Title:</label>
-          <select {...register("title")}>
+          <select id="title" {...register("title")}>
             <option value="Mr.">Mr.</option>
             <option value="Miss">Miss</option>
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="firstName">First name: </label>
-          <input {...register("firstName", { required: true })} />
+          <label htmlFor="firstName">* First name: </label>
+          <input
+            id="firstName"
+            {...register("firstName", { required: true })}
+          />
           {errors.firstName && (
             <p className="error-message">{errors.firstName.message}</p>
           )}
         </div>
         <div className="form-group">
-          <label htmlFor="lastName">Last name:</label>
-          <input {...register("lastName", { required: true })} />
+          <label htmlFor="lastName">* Last name:</label>
+          <input id="lastName" {...register("lastName", { required: true })} />
           {errors.lastName && (
             <p className="error-message">{errors.lastName.message}</p>
           )}
         </div>
         <div className="form-group">
-          <label htmlFor="birthdate">Date of birth:</label>
-          <input type="date" {...register("birthdate", { required: true })} />
+          <label htmlFor="birthdate">* Date of birth:</label>
+          <input
+            id="birthdate"
+            type="date"
+            {...register("birthdate", { required: true })}
+          />
           {errors.birthdate && (
             <p className="error-message">{errors.birthdate.message}</p>
           )}
         </div>
         <div className="form-group">
-          <label htmlFor="housenumber">House number:</label>
-          <input {...register("housenumber", { required: true })} />
+          <label htmlFor="housenumber">* House number:</label>
+          <input
+            id="housenumber"
+            {...register("housenumber", { required: true })}
+          />
           {errors.housenumber && (
             <p className="error-message">{errors.housenumber.message}</p>
           )}
         </div>
         <div className="form-group">
-          <label htmlFor="postcode">Postcode:</label>
-          <input {...register("postcode", { required: true })} />
+          <label htmlFor="postcode">* Postcode:</label>
+          <input id="postcode" {...register("postcode", { required: true })} />
           {errors.postcode && (
             <p className="error-message">{errors.postcode.message}</p>
           )}
         </div>
         <div className="form-group">
           <label htmlFor="employment">Employment status:</label>
-          <select {...register("employment")}>
+          <select id="employment" {...register("employment")}>
             <option value="fulltime">Full time</option>
             <option value="parttime">Part time</option>
             <option value="student">Student</option>
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="income">Annual income:</label>
+          <label htmlFor="income">* Annual income:</label>
           <input
+            id="income"
             {...register("income", { required: true })}
             type="number"
             min="0"
@@ -124,7 +135,7 @@ export const UserForm = ({ onSetCards }) => {
             <p className="error-message">{errors.income.message}</p>
           )}
         </div>
-        <input type="submit" />
+        <input data-testid="submit-btn" type="submit" />
       </form>
     </div>
   );
