@@ -20,6 +20,7 @@ export const CardList = ({ cards, onSetCards }) => {
   }, [cards]);
 
   const handleSelectCard = (cardId) => {
+    console.log("selected card:", cardId);
     const updatedCards = cards.map((card) => {
       if (card.id === cardId) {
         return { ...card, selected: !card.selected };
@@ -40,7 +41,7 @@ export const CardList = ({ cards, onSetCards }) => {
           <p>
             <b>Total credit available: &#163;{totalCredit}</b>
           </p>
-          <div>
+          <div data-testid="list-of-cards">
             {cards.map((card) => (
               <Card
                 key={card.id}

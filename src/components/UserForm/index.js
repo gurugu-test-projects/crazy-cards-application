@@ -30,6 +30,7 @@ export const UserForm = ({ onSetCards }) => {
   });
 
   const onSubmit = (data) => {
+    console.log(data);
     const eligibleCards = cardList
       .filter((card) => {
         if (Object.keys(card.req).length === 0) {

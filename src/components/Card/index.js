@@ -5,12 +5,13 @@ import "./index.css";
 export const Card = ({ card, handleSelectCard }) => {
   return (
     <div
+      data-testid="eligible-card"
       className={classNames("card", {
         selected: card.selected,
       })}
       onClick={() => handleSelectCard(card.id)}
     >
-      <h5>{card.title}</h5>
+      <h5 data-testid="eligible-card-title">{card.title}</h5>
       {card.selected && (
         <div>
           <p>
